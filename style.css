@@ -1,0 +1,181 @@
+body
+{
+    color: white;
+    background-color: LightGrey;
+}
+
+.title
+{
+    font-family: "PT Sans", Arial, serif;
+    left: 30%;
+    /*top: 50%;
+    width: 500px;
+    height: 300px;
+    margin: -250px 0 0 -150px;   */
+}
+
+.horizontal
+{
+    display: flex;
+}
+
+.vertical
+{
+    display: block;
+}
+
+.component,
+.host,
+.application,
+.process,
+.thread,
+.stage,
+.modality,
+.database,
+.table,
+.filesystem,
+.doc,
+.value
+{
+    display: block;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba( 0, 0, 0, 0.33 );
+}
+
+h1
+{
+    font-size: 60px;
+}
+
+a
+{
+    color: LightBlue;
+}
+
+ol
+{
+    display: block;
+}
+
+.message
+{
+    display: block;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    background-color: Crimson;
+}
+
+.centered
+{
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    margin: -250px 0 0 -150px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.button
+{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #ff3b30;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 0;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.button:hover
+            {
+                opacity: 0.5;
+            }
+
+.database
+{
+    border: 2px solid black;
+}
+
+.postgres
+{
+    background-color: RebeccaPurple;
+}
+
+.sybase
+{
+    background-color: DarkGoldenRod;
+}
+
+.table
+{
+    background-color: DarkGrey;
+}
+
+.application
+{
+    background-color: DarkGreen;
+}
+
+.process
+{
+    background-color: Purple;
+}
+
+.thread
+{
+    background-color: DarkBlue;
+}
+
+.stage
+{
+    padding: 5px;
+    margin: 5px;
+}
+
+.modality
+{
+    background-color: Black;
+}
+
+.icon
+{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 50px;
+}
+
+.icon img
+{
+    width: 50px;
+}
+
+.info:hover
+{
+    border-color: orange;
+}
+
+.request
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    /*padding: 5px;
+    margin: 5px;*/
+    background-color: rgba( 128, 0, 0, 1 );
+}
+
+.doc
+{
+    color: Black;
+    background-color: LightBlue;
+}
+
+

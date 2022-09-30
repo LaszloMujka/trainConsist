@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <script src=https://code.jquery.com/jquery-1.12.4.js></script>
+  <script src=https://code.jquery.com/ui/1.12.1/jquery-ui.js></script>
+  <link rel="stylesheet" href=https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css>
+  <link type="text/css" rel="stylesheet" href="../style.css" />
+<!--  <script type="text/javascript" src="../factory.js"></script> -->
+  <script type="text/javascript" src="../jquery.flow.js"></script> 
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div id="desc"><h3>&nbsp;</h3></div>
+  <div class="component"> System
+    <div class="horizontal">
+      <div class="host"> Kafka Topic
+        <div id="app1" class="application info"> Happy Path
+          <br />
+          <button id="createButton">Create Message</button>
+          <input id="messageInput" type="text" value="Planned Consist Created" />
+          
+          <br />
+          <button id="createButton1">Create Message</button>
+          <input id="messageInput1" type="text" value="Planned Consist Updated" />
+
+          <br />
+          <button id="createButton2">Create Message</button>
+          <input id="messageInput2" type="text" value="Planned Consist Deleted" />
+          <br />
+      
+          <button id="process">Process message</button>
+          <br />
+          
+        </div>
+
+        
+      </div>
+
+      <div class="host"> Train consist orchestrator
+        <div id="app2" class="application info"> Microservice
+          <div class="thread info">
+            
+            <div id="start" class="stage info"> Start </div>
+            <div id="gti" class="stage info"> Get Train Information </div>
+            <div id="trainpdscontrolled" class="stage info"> Is the train PDS controlled? </div>
+            <div id="trainretired" class="stage info"> Is the train retired? </div>
+            <div id="consistdeleted" class="stage info"> Planned train consist deleted ? </div>
+            <div id="persisttrainconsistsummary" class="stage info"> Persist Train Consist Summary Information</div>
+            <div id="persistlocomotiveconsist" class="stage info"> Persist Locomotive Consist Information </div>
+            <div id="deletetrainconsistsummary" class="stage info"> Delete Train Consist Information </div>
+            <div id="determineaction" class="stage info"> Determine Consist Action and Station </div>
+            <div id="publishtrainconsistsummary" class="stage info"> Publish Train Consist Summary Message </div>
+            <div id="publishlocomotiveconsist" class="stage info"> Publish Locomotive Consist Message </div>
+          </div>
+        </div>        
+
+        <div id="databases" class="component info"> Cockroach Databases
+          <div id="postgres" class="database info"> pds_train_consist
+            <div id="table1" class="table info">consist_summary </div>
+            <div id="table2" class="table info"> locomotive_consist </div>
+            
+          </div>
+        </div>
+        <div id="exitprogram" class="component info"> End of processing
+          <div id="exit" class="database postgres info"> 
+            <div id="endofprogram" class="table info"> Exit </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="host"> PDS Train Information Service 
+        <div id="app2" class="application info"> Microservice
+          <div class="thread info"> 
+            <div id="tis1" class="stage info"> Get Train 
+              <br />
+              <button id="pds">PDS Train - train not retired</button>
+              <br />
+              <button id="retired">PDS Train - train retired</button>
+              <br />
+              <button id="nonpds">Non PDS Train</button>
+              <br />
+            </div>
+            <div id="tis2" class="stage info"> Get PDS Station </div>
+          </div>
+        </div>        
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <div id="info"></div>
+</body>
+
+</html>
+
